@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* Variables */
 :root {
   --primary-bg: #f5e7db;
@@ -12,7 +14,7 @@
 /* Base styles */
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Poppins', -apple-system, sans-serif;
   background-color: var(--primary-bg);
   color: var(--text-primary);
 }
@@ -77,6 +79,8 @@ body {
 /* Hero Section */
 .hero-section {
   padding: 3rem 1.5rem;
+  background: var(--primary-bg);
+  background: linear-gradient(180deg,rgba(245, 231, 219, 1) 75%, rgba(255, 255, 255, 1) 75%);
 }
 
 .hero-section .hero-container {
@@ -103,9 +107,10 @@ body {
 
 .hero-section .hero-title {
   font-size: 3.75rem;
-  font-weight: 700;
+  font-weight: 300;
   color: var(--text-primary);
   line-height: 1.1;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -118,7 +123,6 @@ body {
   color: #374151;
   font-size: 1.125rem;
   line-height: 1.7;
-  max-width: 32rem;
 }
 
 .hero-section .hero-buttons {
@@ -165,28 +169,32 @@ body {
 .hero-section .hero-image {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .hero-section .hero-image .image-frame {
   position: relative;
-  width: 20rem;
-  height: 24rem;
-  border-radius: 50% 50% 0 0;
-  overflow: hidden;
-  border: 4px solid var(--text-white);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 28rem;
+  height: 35rem;
+  border-radius: 500px 500px 0 0;
+  border: 3px solid var(--text-primary);
+  top: 50px;
 }
 
 .hero-section .hero-image .hero-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  right: 30px;
+  bottom: 40px;
+  position: absolute;
+  border-radius: 500px 500px 0 0;
 }
 
 /* Schedule Section */
 .schedule-section {
-  padding: 4rem 1.5rem;
+  padding: 7rem 1.5rem;
+  background-color: var(--text-white);
 }
 
 .schedule-section .schedule-container {
@@ -216,12 +224,14 @@ body {
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  margin: 0;
 }
 
 .schedule-section .section-title {
   font-size: 3rem;
   font-weight: 700;
   color: var(--text-primary);
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -262,6 +272,9 @@ body {
 
 .schedule-section .schedule-item .class-time {
   color: var(--text-secondary);
+}
+.is-dark {
+  filter: invert(80%);
 }
 
 /* About Section */
